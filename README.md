@@ -4,7 +4,7 @@ Semana b7web - 7 projetos em Javascript
 
 ## 📋  Projeto 1 - Bateria
 Bateria com possibilidade de programar uma sequencia em javascript
-* [Bateria](http://www.francosinformatica.com/d7_b7web/p1/) - Acesse<>br
+* [Bateria](http://www.francosinformatica.com/d7_b7web/p1/) - Acesse<br>
 
 ## 📋  Projeto 2 - Relógio Analógico
 Relógio analógico e digital com javascript
@@ -17,12 +17,12 @@ Consulta de clima mundial com javascript e api
 
 ## 📋  Projeto 4 - Jogo da Velha
 Jogo da velha em javascript
-* [Jogo da Velha](http://www.francosinformatica.com/d7_b7web/p4/) - Acesse
+* [Jogo da Velha](http://www.francosinformatica.com/d7_b7web/p4/) - Acesse<br>
 
 ## 📋  Projeto 5 - Desenhando no Canvas
 Um projeto de desenho com canvas<br>
 _Contém Alterações proprietarias_
-* [Canvas](http://www.francosinformatica.com/d7_b7web/p5/) - Acesse
+* [Canvas](http://www.francosinformatica.com/d7_b7web/p5/) - Acesse<br>
 
 ## 📋  Projeto 6 - Quiz Dinâmico
 Um quiz totalmente dinâmico com javascript
