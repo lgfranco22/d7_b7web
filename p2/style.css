@@ -60,12 +60,14 @@ h1 {
     transform: rotate(0deg);
     border-radius: 50%;
     position: absolute;
+
 }
 
 .p_s {
     width: 100px;
     height: 3px;
     background-color: #F00;
+    transition: all ease .5s;
 }
 .p_m {
     width: 120px;
