@@ -59,6 +59,17 @@ function optionClickEvent(e) {
 function finishQuiz() {
     let points = Math.floor((correctAnswers / questions.length) * 100);
     
+    $.post(
+        "processa.php", 
+        {
+            nome: nome, 
+            pontos: points 
+        }
+    );
+
+    //.done((data)=>{
+    //});
+
     if(points < 30) {
         document.querySelector('.scoreText1').innerHTML = `Tá ruim hein ${nome}?!`;
         document.querySelector('.scorePct').style.color = '#FF0000';
