@@ -18,6 +18,8 @@ Passo a passo para desenhar no canvas:
 - Quando o clique do mouse for solto, desative o modo desenho.
 */
 
+document.querySelector('.down').addEventListener('click', download);
+
 document.querySelector('#ma').addEventListener('click', maCursor);
 document.querySelector('#me').addEventListener('click', meCursor);
 
@@ -92,7 +94,7 @@ function clearScreen() {
 }
 
 function maCursor(){
-    if(lineW <= 50){
+    if(lineW < 50){
         lineW++;
     }
     updateLineW();
@@ -107,4 +109,15 @@ function meCursor(){
 
 function updateLineW() {
     document.querySelector('#info').innerHTML = lineW;
+}
+
+function download(){
+    let nome = prompt('Digite um nome para o arquivo');
+    if(nome === null){
+        nome = 'imagem';
+    }
+    var link = document.createElement('a');
+    link.download = nome+'.png';
+    link.href = document.getElementById('tela').toDataURL()
+    link.click();
 }
