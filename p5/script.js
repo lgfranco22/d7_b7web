@@ -4,6 +4,7 @@ let canDraw = false;
 let mouseX = 0;
 let mouseY = 0;
 let lineW = 5;
+let typeLine = 'round'; // round, bevel, miter
 updateLineW();
 
 let screen = document.querySelector('#tela');
@@ -74,7 +75,7 @@ function draw(x, y) {
     // desenhar
     ctx.beginPath();
     ctx.lineWidth = lineW;
-    ctx.lineJoin = "round";
+    ctx.lineJoin = typeLine; // round, bevel, miter
     ctx.moveTo(mouseX, mouseY);
     ctx.lineTo(pointX, pointY);
     ctx.closePath();
@@ -101,13 +102,18 @@ function maCursor(){
 }
 
 function meCursor(){
+    
     if(lineW > 5){
         lineW--;
     }
+    
     updateLineW();
 }
 
 function updateLineW() {
+    if(lineW <= 9 && lineW !== '05'){
+        lineW = '0'+lineW;
+    }
     document.querySelector('#info').innerHTML = lineW;
 }
 
