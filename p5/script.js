@@ -3,6 +3,8 @@ let currentColor = 'black';
 let canDraw = false;
 let mouseX = 0;
 let mouseY = 0;
+let lineW = 5;
+updateLineW();
 
 let screen = document.querySelector('#tela');
 let ctx = screen.getContext('2d'); // contexto 2d
@@ -15,6 +17,9 @@ Passo a passo para desenhar no canvas:
 - Quando o mouse se mover, se o modo desenho estiver ativado, desenhe.
 - Quando o clique do mouse for solto, desative o modo desenho.
 */
+
+document.querySelector('#ma').addEventListener('click', maCursor);
+document.querySelector('#me').addEventListener('click', meCursor);
 
 document.querySelectorAll('.colorArea .color').forEach(item=>{
     item.addEventListener('click', colorClickEvent);
@@ -66,7 +71,7 @@ function draw(x, y) {
 
     // desenhar
     ctx.beginPath();
-    ctx.lineWidth = 5;
+    ctx.lineWidth = lineW;
     ctx.lineJoin = "round";
     ctx.moveTo(mouseX, mouseY);
     ctx.lineTo(pointX, pointY);
@@ -82,4 +87,24 @@ function draw(x, y) {
 function clearScreen() {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    lineW = 5;
+    updateLineW();
+}
+
+function maCursor(){
+    if(lineW <= 50){
+        lineW++;
+    }
+    updateLineW();
+}
+
+function meCursor(){
+    if(lineW > 5){
+        lineW--;
+    }
+    updateLineW();
+}
+
+function updateLineW() {
+    document.querySelector('#info').innerHTML = lineW;
 }

@@ -19,10 +19,26 @@ h1 {
     margin-bottom: 20px;
 }
 
+.btn-tam button{
+    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #FFF;
+    padding: 10px;
+    cursor: pointer;
+}
+
 #tela {
     border: 2px solid #000;
     background-color: #FFF;
     cursor: crosshair;
+}
+
+#info{
+    padding: 8px 10px;
+    background-color: rgba(0,0,0,.2);
+    color: #fff;
+    border: 1px solid black;
+    height: 38px;
 }
 
 .colorArea {
